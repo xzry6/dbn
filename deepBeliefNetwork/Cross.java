@@ -164,8 +164,8 @@ public class Cross {
 		
 
 		InputArizona.read();
-    	InputArizona.compare();
-    	InputArizona.encode();
+    		InputArizona.compare();
+    		InputArizona.encode();
 		double[] l = new double[InputArizona.encode.length];
 		
 		double[] mylabel = f_t.test(InputArizona.encode, l, rbm);
