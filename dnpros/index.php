@@ -153,12 +153,10 @@
 		<title>DBN</title>
 
 		<link href="format/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="format/kvbf/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="try.css">
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="format/kvbf/js/fileinput.js" type="text/javascript"></script>
-        <script src="format/js/bootstrap.min.js" type="text/javascript"></script>
+        	<script src="format/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="format/js/Chartmaster/Chart.js" type="text/javascript"></script>
 	</head>
 
