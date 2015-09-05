@@ -1,12 +1,10 @@
 package deepBeliefNetwork;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class LogisticRegression {
 	static double[] traditionalLR(double[][] train, double[] prelabel, 
 			int epoche, double learningRate, double[][] test, double[] pretest_label){
-
 		int num = train.length;//number of training samples
 		int length = train[0].length;//number of visible units
 		double[][] label = new double[num][1];

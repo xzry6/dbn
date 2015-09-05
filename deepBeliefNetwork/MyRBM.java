@@ -118,9 +118,9 @@ public class MyRBM {
 	
 	void cD(double[] sV0, int k, double learningRate){
 		double[] pH0 = sigmoidHgivenV(sV0,1,0);
-		//double[] dropRate = simpleRate(0.5);
-	    //dropOut(pH0, dropRate, true);
-		dropOut(pH0, sigmoidHgivenV(sV0,2,3), true);
+		double[] dropRate = simpleRate(0.6);
+	    dropOut(pH0, dropRate, true);
+		//dropOut(pH0, sigmoidHgivenV(sV0,2,3), true);
 		double[] pHn = new double[hidNum];
 		double[] pVn = new double[visNum];
 		double[] sHn = new double[hidNum];

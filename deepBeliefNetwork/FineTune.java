@@ -121,9 +121,9 @@ public class FineTune {
 					rbm.getRBM(rbmList.get(l));
 					sigLayer = rbm.sigmoidHgivenV(tempLayer,1,0);
 					
-					//double[] dropRate = rbm.simpleRate(0.5);
-					rbm.dropOut(sigLayer, rbm.sigmoidHgivenV(tempLayer,2,3), true);
-					//rbm.dropOut(sigLayer, dropRate, true);
+					double[] dropRate = rbm.simpleRate(0.6);
+					//rbm.dropOut(sigLayer, rbm.sigmoidHgivenV(tempLayer,2,3), true);
+					rbm.dropOut(sigLayer, dropRate, true);
 					
 					sigList.add(sigLayer);
 					tempLayer = sigLayer;
@@ -188,9 +188,9 @@ public class FineTune {
 				MyRBM rbm = new MyRBM();
 				rbm.getRBM(rbmList.get(l));
 				nextLayer = rbm.sigmoidHgivenV(currentLayer,1,0);
-				//double[] dropRate = rbm.simpleRate(0.5);
-				//rbm.dropOut(nextLayer, dropRate, false);
-				rbm.dropOut(nextLayer, rbm.sigmoidHgivenV(currentLayer,2,3), false);
+				double[] dropRate = rbm.simpleRate(0.6);
+				rbm.dropOut(nextLayer, dropRate, false);
+				//rbm.dropOut(nextLayer, rbm.sigmoidHgivenV(currentLayer,2,3), false);
 				currentLayer = nextLayer;
 			}
 			

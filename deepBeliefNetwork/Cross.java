@@ -20,6 +20,7 @@ public class Cross {
 	Random r = new Random(32553532);
 	
 	Cross(double[][] data, double[] label, int fold){
+
 		num = data.length;
 		length = data[0].length;
 		this.fold = fold;
@@ -98,7 +99,6 @@ public class Cross {
 			trainLabel = new double[trainN];
 			getTrain(f, train, trainLabel);
 			
-			
 			double[] lglabel = LogisticRegression.traditionalLR(train, trainLabel, epoche, finetuneRate, test, testLabel);
 			
 			
@@ -164,8 +164,8 @@ public class Cross {
 		
 
 		InputArizona.read();
-    		InputArizona.compare();
-    		InputArizona.encode();
+    	InputArizona.compare();
+    	InputArizona.encode();
 		double[] l = new double[InputArizona.encode.length];
 		
 		double[] mylabel = f_t.test(InputArizona.encode, l, rbm);
